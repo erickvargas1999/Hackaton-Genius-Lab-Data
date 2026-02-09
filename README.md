@@ -38,9 +38,12 @@ Para procesar los datos, ejecute los notebooks en el siguiente orden:
 ## 📈 Indicadores Clave (KPIs)
 El análisis se centra en las siguientes métricas calculadas:
 
-- **Ingresos Netos:** $\sum(\text{fact\_ventas}[subtotal])$
-- **Costo de Ventas (COGS):** $\sum(\text{fact\_ventas}[cantidad] \times \text{costo\_producto})$
-- **Margen Bruto:** $\text{Ingresos} - \text{Costo de Ventas}$
+| Métrica | Fórmula de Cálculo | Descripción |
+| :--- | :--- | :--- |
+| **Ingresos Netos** | `SUM(fact_ventas[subtotal])` | Ventas totales sin incluir impuestos. |
+| **Costo de Ventas** | `SUM(cantidad * costo_sin_iva)` | Costo de adquisición de los productos vendidos. |
+| **Margen Bruto** | `Ingresos Netos - Costo de Ventas` | Rentabilidad monetaria de la operación. |
+| **% Margen** | `(Margen Bruto / Ingresos Netos) * 100` | Rentabilidad porcentual por venta. |
 
 ## ⚙️ Requisitos
 - **Databricks Runtime:** 11.0 o superior.
